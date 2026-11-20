@@ -1,0 +1,291 @@
+/* ========================================
+   ISABELLE JACOBSON MARKETING PORTFOLIO
+   Main Stylesheet
+======================================== */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+/* ========================================
+   GENERAL PAGE STYLES
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #fffafc;
+    color: #333333;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    background-color: #f6dce5;
+    text-align: center;
+    padding: 55px 20px 45px;
+}
+
+header h1 {
+    margin: 0;
+    color: #333333;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 52px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 6px 0 0;
+    color: #66745b;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eadde2;
+    padding: 18px 20px;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 22px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #a27383;
+}
+
+
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 20px;
+}
+
+main > section:first-child {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 45px 20px 80px;
+    text-align: center;
+}
+
+main > section:first-child h2 {
+    margin: 0 0 20px;
+    color: #333333;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+main > section:first-child p {
+    max-width: 760px;
+    margin: 12px auto;
+    color: #4a4a4a;
+    font-size: 17px;
+}
+
+
+/* ========================================
+   SECTION HEADINGS
+======================================== */
+
+main > section:not(:first-child) {
+    margin-bottom: 75px;
+}
+
+main > section:not(:first-child) > h2 {
+    margin: 0 0 35px;
+    color: #66745b;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 38px;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+/* ========================================
+   PROJECT / CONTENT CARDS
+======================================== */
+
+article {
+    margin-bottom: 25px;
+    padding: 30px 32px;
+    background-color: #ffffff;
+    border: 1px solid #eadde2;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(70, 55, 60, 0.05);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 25px rgba(70, 55, 60, 0.09);
+}
+
+article h3 {
+    margin: 0 0 14px;
+    color: #a27383;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+article p {
+    margin: 8px 0;
+    color: #444444;
+    font-size: 15px;
+}
+
+
+/* ========================================
+   LINKS
+======================================== */
+
+main a {
+    color: #8f6574;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    margin-top: 50px;
+    padding: 28px 20px;
+    background-color: #66745b;
+    color: #ffffff;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 800px) {
+
+    header h1 {
+        font-size: 44px;
+    }
+
+    nav a {
+        margin: 0 12px;
+    }
+
+    main {
+        width: 94%;
+        padding: 50px 15px;
+    }
+
+    main > section:first-child h2 {
+        font-size: 43px;
+    }
+}
+
+
+/* ========================================
+   PHONE
+======================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 40px 15px 32px;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 0;
+        padding: 9px;
+    }
+
+    main {
+        width: 94%;
+        padding: 35px 12px;
+    }
+
+    main > section:first-child {
+        padding: 30px 10px 55px;
+    }
+
+    main > section:first-child h2 {
+        font-size: 38px;
+    }
+
+    main > section:first-child p {
+        font-size: 15px;
+    }
+
+    main > section:not(:first-child) > h2 {
+        font-size: 32px;
+    }
+
+    article {
+        padding: 24px;
+    }
+
+    article h3 {
+        font-size: 22px;
+    }
+}
