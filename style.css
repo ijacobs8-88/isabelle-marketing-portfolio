@@ -5,7 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700&display=swap');
 
 
-/* GENERAL */
+/* ========================================
+   GENERAL
+======================================== */
 
 * {
     box-sizing: border-box;
@@ -25,59 +27,77 @@ body {
 }
 
 
-/* HEADER */
+/* ========================================
+   GLOBAL HEADER
+   SAME ON EVERY PAGE
+======================================== */
 
-header {
+body > header {
+    width: 100%;
+    margin: 0;
+    padding: 55px 20px 45px;
     background-color: #f6dce5;
     text-align: center;
-    padding: 55px 20px 45px;
 }
 
-header h1 {
+body > header h1 {
     margin: 0;
     color: #333333;
     font-family: "DM Serif Display", Georgia, serif;
     font-size: 52px;
     font-weight: normal;
+    line-height: 1.2;
     letter-spacing: 1px;
 }
 
-header p {
+body > header p {
     margin: 6px 0 0;
     color: #66745b;
+    font-family: "Montserrat", Arial, sans-serif;
     font-size: 17px;
     font-weight: 500;
+    line-height: 1.7;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 
-/* NAVIGATION */
+/* ========================================
+   GLOBAL NAVIGATION
+   SAME ON EVERY PAGE
+======================================== */
 
-nav {
+body > nav {
+    width: 100%;
+    margin: 0;
+    padding: 18px 20px;
     background-color: #ffffff;
     border-bottom: 1px solid #eadde2;
-    padding: 18px 20px;
     text-align: center;
 }
 
-nav a {
+body > nav a {
     display: inline-block;
     margin: 0 22px;
+    padding: 0;
     color: #333333;
+    font-family: "Montserrat", Arial, sans-serif;
     font-size: 14px;
     font-weight: 600;
+    line-height: 1.7;
     letter-spacing: 0.5px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-nav a:hover {
+body > nav a:hover {
     color: #a27383;
 }
 
 
-/* MAIN CONTENT */
+/* ========================================
+   MAIN CONTENT
+======================================== */
 
 main {
     width: 90%;
@@ -109,7 +129,9 @@ main > section:first-child p {
 }
 
 
-/* HOME PAGE */
+/* ========================================
+   HOME PAGE
+======================================== */
 
 .home-main {
     width: 94%;
@@ -230,7 +252,9 @@ main > section:first-child p {
 }
 
 
-/* ABOUT ME */
+/* ========================================
+   ABOUT ME
+======================================== */
 
 main:has(.about-intro) {
     width: 96%;
@@ -260,6 +284,7 @@ main > .about-intro {
     font-family: "DM Serif Display", Georgia, serif;
     font-size: 50px;
     font-weight: normal;
+    text-align: center;
 }
 
 .about-text p {
@@ -281,13 +306,15 @@ main > .about-intro {
     width: 400px;
     height: 540px;
     object-fit: cover;
-    object-position: center;
+    object-position: center center;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(70, 55, 60, 0.12);
 }
 
 
-/* STANDARD SECTION HEADINGS */
+/* ========================================
+   STANDARD SECTION HEADINGS
+======================================== */
 
 main > section:not(:first-child) {
     margin-bottom: 75px;
@@ -303,7 +330,9 @@ main > section:not(:first-child) > h2 {
 }
 
 
-/* STANDARD CARDS */
+/* ========================================
+   STANDARD CONTENT CARDS
+======================================== */
 
 article {
     margin-bottom: 25px;
@@ -337,7 +366,9 @@ article p {
 }
 
 
-/* EXPERIENCE TABLE */
+/* ========================================
+   EXPERIENCE TABLE
+======================================== */
 
 .experience-overview {
     max-width: 1000px;
@@ -404,11 +435,15 @@ td:last-child {
 }
 
 
-/* PORTFOLIO */
+/* ========================================
+   PORTFOLIO PAGE
+======================================== */
 
 .portfolio-main {
     width: 94%;
     max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .portfolio-main > .portfolio-intro {
@@ -492,7 +527,9 @@ td:last-child {
 }
 
 
-/* PORTFOLIO IMAGES */
+/* ========================================
+   PORTFOLIO IMAGES
+======================================== */
 
 .portfolio-image {
     display: block;
@@ -530,7 +567,9 @@ td:last-child {
 }
 
 
-/* PORTFOLIO VIDEOS */
+/* ========================================
+   PORTFOLIO VIDEOS
+======================================== */
 
 .portfolio-video {
     display: block;
@@ -544,7 +583,9 @@ td:last-child {
 }
 
 
-/* AMA SOCIAL MEDIA COMMITTEE */
+/* ========================================
+   AMA SOCIAL MEDIA COMMITTEE
+======================================== */
 
 .ama-social-heading {
     margin-top: 95px;
@@ -573,6 +614,7 @@ td:last-child {
     height: 340px;
     padding: 5px;
     object-fit: contain;
+    object-position: center;
     background-color: #fffafc;
     border-radius: 8px;
 }
@@ -602,7 +644,9 @@ td:last-child {
 }
 
 
-/* CONTACT PAGE */
+/* ========================================
+   CONTACT PAGE
+======================================== */
 
 .contact-section {
     max-width: 1000px;
@@ -679,6 +723,9 @@ form {
     font-family: "Montserrat", Arial, sans-serif;
     font-size: 14px;
     outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .form-group textarea {
@@ -705,10 +752,14 @@ form button {
     font-weight: 700;
     letter-spacing: 0.8px;
     cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 form button:hover {
     background-color: #56634c;
+    transform: translateY(-2px);
 }
 
 .resume-section {
@@ -724,7 +775,9 @@ form button:hover {
 }
 
 
-/* LINKS */
+/* ========================================
+   LINKS
+======================================== */
 
 main a {
     color: #8f6574;
@@ -737,7 +790,9 @@ main a:hover {
 }
 
 
-/* FOOTER */
+/* ========================================
+   FOOTER
+======================================== */
 
 footer {
     margin-top: 50px;
@@ -754,7 +809,9 @@ footer p {
 }
 
 
-/* LARGE TABLET */
+/* ========================================
+   LARGE TABLET / SMALL LAPTOP
+======================================== */
 
 @media (max-width: 1200px) {
 
@@ -782,15 +839,17 @@ footer p {
 }
 
 
-/* TABLET */
+/* ========================================
+   TABLET
+======================================== */
 
 @media (max-width: 900px) {
 
-    header h1 {
+    body > header h1 {
         font-size: 44px;
     }
 
-    nav a {
+    body > nav a {
         margin: 0 12px;
     }
 
@@ -852,27 +911,29 @@ footer p {
 }
 
 
-/* PHONE */
+/* ========================================
+   PHONE
+======================================== */
 
 @media (max-width: 600px) {
 
-    header {
+    body > header {
         padding: 40px 15px 32px;
     }
 
-    header h1 {
+    body > header h1 {
         font-size: 38px;
     }
 
-    header p {
+    body > header p {
         font-size: 13px;
     }
 
-    nav {
+    body > nav {
         padding: 10px;
     }
 
-    nav a {
+    body > nav a {
         display: block;
         margin: 0;
         padding: 9px;
@@ -919,6 +980,7 @@ footer p {
         flex-direction: column;
         gap: 35px;
         padding: 30px 10px 60px;
+        text-align: center;
     }
 
     .about-text {
